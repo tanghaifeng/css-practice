@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -14,14 +14,35 @@
     </div>
 
     <div style="margin-top: 10px;border-style: inset;border-color: #ff3366 red #0b1780 gray">
-        边框颜色
+        border-color 边框颜色 火狐浏览器需加前缀 -moz-
     </div>
 
     <div style="margin-top: 10px;border: 1px seagreen solid;border-width: 1px 0 1px 0;">
         边框
     </div>
     <div style="margin-top: 10px;border: 1px seagreen solid;border-width: 0 0 0 3px;">
-        这是左边框
+        左边框
     </div>
+
+    <div style="margin-top: 10px;border: 1px seagreen solid;border-radius: 5px">
+        border-radius
+    </div>
+
+    <div style="width:150px;height: 35px;line-height: 33px; margin-top: 10px;border: 1px seagreen solid;border-radius: 5px;background: green;color: #fff;text-align: center">
+        border-radius
+    </div>
+
+    <div style="height: 35px;line-height: 33px; margin-top: 10px;border: 1px seagreen solid;border-radius: 5px 30px 5px 30px;background: green;color: #fff;text-align: center">
+        border-radius: 5px 30px 5px 30px
+    </div>
+
+    <div style="color:#fff;text-align: center;line-height: 100px;width: 100px;height:100px; margin-top: 10px;background-color: orange;border-radius: 50%">
+        圆
+    </div>
+
+    <div style="color:#fff;text-align: center;line-height: 50px;width: 100px;height:50px; margin-top: 10px;background-color: orange;border-radius: 50px 50px 0 0">
+        半圆
+    </div>
+
 </body>
 </html>
