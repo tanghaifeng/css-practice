@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        const obj = {
+            age: 0
+        };
+        const proxy = new Proxy(obj,{
+            set(target, p, value, receiver) {
+                if (typeof value !== 'number') {
+                    console.log("error");
+                    return false;
+                } else {
+                    return Reflect.set(...arguments);
+                }
+            }
+        });
+        obj.age = '1111'
+
+        let sum = (num)=> {
+            console.log(num);
+        }
+        sum('箭头函数')
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix:after,clearfix:before {
+            display: table;
+            content: "";
+        }
+        .clearfix:after {
+            clear:both;
+            overflow: hidden;
+        }
+        .demo {
+            width: 250px;
+            border:1px solid #ccc;
+            padding: 10px;
+            margin: 20px auto;
+
+        }
+        li {
+            list-style: none outside none;
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            width: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background: #f36;
+            color: orange;
+            margin-right: 5px;
+
+        }
+        ul {
+            background: gray;
+        }
+        .div_1~div {
+            background: #ccc;
+            color: #ff3366;
+            width: 100%;
+            height: 20px;
+        }
+
+        .a1:hover {
+            color:orange;
+
+        }
+
+        .a1:active {
+            color: green;
+        }
+
+        .a1:link {
+            color: #801529;
+        }
+
+        .a1:focus {
+            color: orange;
+        }
+
+        .a1:visited {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="clearfix demo">
+       <ul>
+           <li class="first" id="first">
+               1
+           </li>
+           <li class="active">
+               2
+           </li>
+           <li class="important item">
+               3
+           </li>
+           <li class="important">
+               4
+           </li>
+           <li class="item">
+               5
+           </li>
+       </ul>
+
+    </div>
+
+    <div class="div_1">
+        1
+    </div>
+    <div>
+        1
+    </div>
+    <div>
+
+    </div>
+    <a class="a1">测试动态伪类</a>
+</body>
+
+</html>
